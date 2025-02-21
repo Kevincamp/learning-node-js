@@ -1,0 +1,26 @@
+ ### Lista de Peliculas
+ GET http://localhost:1234/movies
+
+### Buscar pelicula
+ GET http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+
+
+## Filtrar por genero 
+GET http://localhost:1234/movies/movies?gender=Drama
+
+### Crear una nueva movie
+POST http://localhost:1234/movies
+Content-Type: application/json
+
+{
+  "title": "The Shawshank Redemption",
+  "year": 1994,
+  "director": "Frank Darabont",
+  "duration": 142,
+  "poster": "https://i.imgur.com/SuW2ZlC.jpg",
+  "genre": ["Drama"],
+  "rate": 9.3
+}
+
+PATCH http://localhost:1234/movies
+
